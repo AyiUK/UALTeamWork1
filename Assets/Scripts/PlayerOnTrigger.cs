@@ -38,6 +38,6 @@ public class PlayerOnTrigger : MonoBehaviour
     /// </summary>
     public virtual void ColliderIsTriggered()
     {
-        Debug.Log("tirgger被触发了", this);
+        Debug.Log("门打开了，灯亮起了", this);
     }
 }

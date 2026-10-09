@@ -314,7 +314,7 @@ Transform:
   m_GameObject: {fileID: 77718579}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.96, y: 0, z: 7.10292}
+  m_LocalPosition: {x: -4.96, y: 0, z: 3.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -710,7 +710,7 @@ PrefabInstance:
       objectReference: {fileID: 1216558059}
     - target: {fileID: 1622827612804745344, guid: 174bc28a465a0ae4a98466120e5ac5d8, type: 3}
       propertyPath: m_VersionIndex
-      value: 5577
+      value: 5580
       objectReference: {fileID: 0}
     - target: {fileID: 2324645975751499828, guid: 174bc28a465a0ae4a98466120e5ac5d8, type: 3}
       propertyPath: m_Mesh
@@ -774,7 +774,7 @@ PrefabInstance:
       objectReference: {fileID: 2146972420}
     - target: {fileID: 4931945517513794332, guid: 174bc28a465a0ae4a98466120e5ac5d8, type: 3}
       propertyPath: m_VersionIndex
-      value: 4840
+      value: 4843
       objectReference: {fileID: 0}
     - target: {fileID: 5067111114989051417, guid: 174bc28a465a0ae4a98466120e5ac5d8, type: 3}
       propertyPath: m_Mesh
@@ -790,7 +790,7 @@ PrefabInstance:
       objectReference: {fileID: 98787163}
     - target: {fileID: 5791143948049624952, guid: 174bc28a465a0ae4a98466120e5ac5d8, type: 3}
       propertyPath: m_VersionIndex
-      value: 10890
+      value: 10893
       objectReference: {fileID: 0}
     - target: {fileID: 6285449212171838344, guid: 174bc28a465a0ae4a98466120e5ac5d8, type: 3}
       propertyPath: m_Mesh
@@ -806,7 +806,7 @@ PrefabInstance:
       objectReference: {fileID: 1479171323}
     - target: {fileID: 6731655887088815912, guid: 174bc28a465a0ae4a98466120e5ac5d8, type: 3}
       propertyPath: m_VersionIndex
-      value: 4377
+      value: 4380
       objectReference: {fileID: 0}
     - target: {fileID: 7485530493660718516, guid: 174bc28a465a0ae4a98466120e5ac5d8, type: 3}
       propertyPath: m_Mesh
@@ -814,7 +814,7 @@ PrefabInstance:
       objectReference: {fileID: 1111782276}
     - target: {fileID: 7485530493660718516, guid: 174bc28a465a0ae4a98466120e5ac5d8, type: 3}
       propertyPath: m_VersionIndex
-      value: 4180
+      value: 4183
       objectReference: {fileID: 0}
     - target: {fileID: 7987498565697568540, guid: 174bc28a465a0ae4a98466120e5ac5d8, type: 3}
       propertyPath: m_Mesh
@@ -2092,6 +2092,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1181280279003343109, guid: 96311b195c2e1b647a423c457c97d2f7, type: 3}
+      propertyPath: cameraTarget
+      value: 
+      objectReference: {fileID: 593497896}
     - target: {fileID: 1690238720075014039, guid: 96311b195c2e1b647a423c457c97d2f7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2135,6 +2139,34 @@ PrefabInstance:
     - target: {fileID: 7985940676133210739, guid: 96311b195c2e1b647a423c457c97d2f7, type: 3}
       propertyPath: m_Name
       value: PlayerModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134706301026968091, guid: 96311b195c2e1b647a423c457c97d2f7, type: 3}
+      propertyPath: offset.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134706301026968091, guid: 96311b195c2e1b647a423c457c97d2f7, type: 3}
+      propertyPath: aimCamera
+      value: 
+      objectReference: {fileID: 1573053716}
+    - target: {fileID: 8134706301026968091, guid: 96311b195c2e1b647a423c457c97d2f7, type: 3}
+      propertyPath: turnSpeed
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134706301026968091, guid: 96311b195c2e1b647a423c457c97d2f7, type: 3}
+      propertyPath: aimAreaSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134706301026968091, guid: 96311b195c2e1b647a423c457c97d2f7, type: 3}
+      propertyPath: aimAreaSize.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134706301026968091, guid: 96311b195c2e1b647a423c457c97d2f7, type: 3}
+      propertyPath: maxHorizontalAngle
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134706301026968091, guid: 96311b195c2e1b647a423c457c97d2f7, type: 3}
+      propertyPath: maxVerticalAngleFromYAxis
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
