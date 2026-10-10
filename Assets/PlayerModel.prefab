@@ -45,7 +45,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   player: {fileID: 1690238720075014039}
-  offset: {x: 0, y: 1.5, z: 0}
+  offset: {x: 0, y: 2, z: 0}
+  aimCamera: {fileID: 0}
+  turnSmoothTime: 0.5
+  maxTurnSpeed: 90
+  maxYawFromPlayer: 89
 --- !u!1 &2509710213039013498
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,7 +174,7 @@ GameObject:
   - component: {fileID: 7849042445167775438}
   - component: {fileID: 2685743228256243366}
   m_Layer: 0
-  m_Name: TriggerCollider1
+  m_Name: TriggerColliderBig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -228,6 +232,7 @@ GameObject:
   - component: {fileID: 5578565998397891219}
   - component: {fileID: 1181280279003343109}
   - component: {fileID: 2825157418093631355}
+  - component: {fileID: 5088497069423081160}
   m_Layer: 0
   m_Name: PlayerModel
   m_TagString: Untagged
@@ -345,6 +350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb7a97718b5546d45923a4a62bda6a7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  cameraTarget: {fileID: 8354636757393105123}
   moveSpeed: 5
   turnSpeed: 120
   gravity: -9.8
@@ -373,6 +379,33 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &5088497069423081160
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7985940676133210739}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &9140500286296302292
 GameObject:
   m_ObjectHideFlags: 0
