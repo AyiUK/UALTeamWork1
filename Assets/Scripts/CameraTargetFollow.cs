@@ -6,10 +6,13 @@ public class CameraTargetFollow : MonoBehaviour
     [SerializeField] private Transform player;
     [SerializeField] private Vector3 offset = new Vector3(0f, 1.5f, 0f);
     [SerializeField] private Camera aimCamera;
-    [SerializeField] private float turnSpeed = 100f;
+    [SerializeField, Min(0.01f)] private float turnSmoothTime = 0.25f;
+    [SerializeField, Min(1f)] private float maxTurnSpeed = 90f;
     [SerializeField, Range(0f, 89f)] private float maxYawFromPlayer = 89f;
-    [SerializeField, Tooltip("Width and height of the mouse turn area as a fraction of the camera view.")]
-    private Vector2 aimAreaSize = new Vector2(0.6f, 0.6f);
+
+    private float targetYawOffset;
+    private float yawSmoothVelocity;
+    private bool hasInitializedYaw;
 
     private void Awake()
     {
@@ -22,86 +25,66 @@ public class CameraTargetFollow : MonoBehaviour
     private void LateUpdate()
     {
         if (player == null) return;
-        Vector3 followPosition = player.position + offset;
-        transform.position = followPosition;
-        ClampCurrentYawToPlayer();
 
-        if (aimCamera == null) return;
+        Vector3 followPosition = player.position + offset;
+        Vector3 playerForward = Vector3.ProjectOnPlane(player.forward, Vector3.up);
+        if (playerForward.sqrMagnitude < 0.0001f) return;
+        playerForward.Normalize();
+
+        if (!hasInitializedYaw)
+        {
+            Vector3 initialForward = Vector3.ProjectOnPlane(transform.forward, Vector3.up);
+            targetYawOffset = initialForward.sqrMagnitude > 0.0001f
+                ? Vector3.SignedAngle(playerForward, initialForward, Vector3.up)
+                : 0f;
+            targetYawOffset = Mathf.Clamp(targetYawOffset, -maxYawFromPlayer, maxYawFromPlayer);
+            hasInitializedYaw = true;
+        }
 
         Mouse mouse = Mouse.current;
-        if (mouse == null) return;
-
-        Vector2 mousePosition = mouse.position.ReadValue();
-        float cameraDepth = Vector3.Dot(followPosition - aimCamera.transform.position, aimCamera.transform.forward);
-        if (cameraDepth > 0f)
+        if (aimCamera != null && mouse != null)
         {
-            Vector3 cursorWorld = aimCamera.ScreenToWorldPoint(
-                new Vector3(aimCamera.pixelWidth * 0.5f, mousePosition.y, cameraDepth));
-            Vector3 screenCenterWorld = aimCamera.ScreenToWorldPoint(
-                new Vector3(aimCamera.pixelWidth * 0.5f, aimCamera.pixelHeight * 0.5f, cameraDepth));
-            followPosition.z += cursorWorld.z - screenCenterWorld.z;
-            transform.position = followPosition;
+            Vector2 mousePosition = mouse.position.ReadValue();
+            Rect cameraRect = aimCamera.pixelRect;
+            float cameraDepth = Vector3.Dot(
+                followPosition - aimCamera.transform.position,
+                aimCamera.transform.forward);
+            if (cameraDepth > 0f && cameraRect.width > 0f && cameraRect.height > 0f)
+            {
+                Vector3 cursorWorld = aimCamera.ScreenToWorldPoint(
+                    new Vector3(cameraRect.center.x, mousePosition.y, cameraDepth));
+                Vector3 screenCenterWorld = aimCamera.ScreenToWorldPoint(
+                    new Vector3(cameraRect.center.x, cameraRect.center.y, cameraDepth));
+                followPosition.z += cursorWorld.z - screenCenterWorld.z;
+            }
+
+            if (mouse.delta.ReadValue().sqrMagnitude > 0f && cameraRect.width > 0f)
+            {
+                float viewportX = (mousePosition.x - cameraRect.x) / cameraRect.width;
+                targetYawOffset = (Mathf.Clamp01(viewportX) - 0.5f) * 2f * maxYawFromPlayer;
+            }
         }
 
-        if (mouse.delta.ReadValue().sqrMagnitude <= 0f) return;
-        if (!IsMouseInsideAimArea(mousePosition)) return;
+        transform.position = followPosition;
 
-        Ray mouseRay = aimCamera.ScreenPointToRay(mousePosition);
-        Plane aimPlane = new Plane(Vector3.up, transform.position);
-        if (!aimPlane.Raycast(mouseRay, out float distance)) return;
+        Vector3 currentForward = Vector3.ProjectOnPlane(transform.forward, Vector3.up);
+        float currentYawOffset = currentForward.sqrMagnitude > 0.0001f
+            ? Vector3.SignedAngle(playerForward, currentForward, Vector3.up)
+            : targetYawOffset;
+        currentYawOffset = Mathf.Clamp(currentYawOffset, -maxYawFromPlayer, maxYawFromPlayer);
 
-        Vector3 direction = Vector3.ProjectOnPlane(
-            mouseRay.GetPoint(distance) - transform.position,
-            Vector3.up);
-        if (direction.sqrMagnitude < 0.0001f) return;
+        float smoothTime = Mathf.Max(0.01f, turnSmoothTime);
+        float smoothedYawOffset = Mathf.SmoothDampAngle(
+            currentYawOffset,
+            targetYawOffset,
+            ref yawSmoothVelocity,
+            smoothTime,
+            maxTurnSpeed,
+            Time.deltaTime);
+        smoothedYawOffset = Mathf.Clamp(smoothedYawOffset, -maxYawFromPlayer, maxYawFromPlayer);
 
-        Vector3 limitedDirection = ClampYawToPlayer(direction);
-        if (limitedDirection.sqrMagnitude < 0.0001f) return;
-
-        Quaternion targetRotation = Quaternion.LookRotation(limitedDirection, Vector3.up);
-        transform.rotation = Quaternion.RotateTowards(
-            transform.rotation,
-            targetRotation,
-            turnSpeed * Time.deltaTime);
+        Vector3 smoothedDirection = Quaternion.AngleAxis(smoothedYawOffset, Vector3.up) * playerForward;
+        transform.rotation = Quaternion.LookRotation(smoothedDirection, Vector3.up);
     }
 
-    private bool IsMouseInsideAimArea(Vector2 screenPosition)
-    {
-        Rect cameraRect = aimCamera.pixelRect;
-        if (cameraRect.width <= 0f || cameraRect.height <= 0f) return false;
-
-        Vector2 viewportPosition = new Vector2(
-            (screenPosition.x - cameraRect.x) / cameraRect.width,
-            (screenPosition.y - cameraRect.y) / cameraRect.height);
-
-        float halfWidth = Mathf.Clamp01(aimAreaSize.x) * 0.5f;
-        float halfHeight = Mathf.Clamp01(aimAreaSize.y) * 0.5f;
-        return Mathf.Abs(viewportPosition.x - 0.5f) <= halfWidth
-            && Mathf.Abs(viewportPosition.y - 0.5f) <= halfHeight;
-    }
-
-    private void ClampCurrentYawToPlayer()
-    {
-        Vector3 targetForward = Vector3.ProjectOnPlane(transform.forward, Vector3.up);
-        Vector3 limitedDirection = ClampYawToPlayer(targetForward);
-        if (limitedDirection.sqrMagnitude < 0.0001f
-            || Vector3.Angle(targetForward, limitedDirection) < 0.01f) return;
-
-        transform.rotation = Quaternion.LookRotation(limitedDirection, Vector3.up);
-    }
-
-    private Vector3 ClampYawToPlayer(Vector3 direction)
-    {
-        Vector3 playerForward = Vector3.ProjectOnPlane(player.forward, Vector3.up);
-        if (playerForward.sqrMagnitude < 0.0001f || direction.sqrMagnitude < 0.0001f)
-        {
-            return Vector3.zero;
-        }
-
-        playerForward.Normalize();
-        direction.Normalize();
-        float yawFromPlayer = Vector3.SignedAngle(playerForward, direction, Vector3.up);
-        yawFromPlayer = Mathf.Clamp(yawFromPlayer, -maxYawFromPlayer, maxYawFromPlayer);
-        return Quaternion.AngleAxis(yawFromPlayer, Vector3.up) * playerForward;
-    }
 }

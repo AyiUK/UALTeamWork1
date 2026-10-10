@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         Keyboard keyboard = Keyboard.current;
         Vector2 input = ReadMovementInput(keyboard);
