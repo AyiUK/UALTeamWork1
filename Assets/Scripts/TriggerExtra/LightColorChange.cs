@@ -8,6 +8,7 @@ public class LightColorChange : MonoBehaviour
 
     void Start()
     {
+        transform.SetParent(null, true);
         StartLight = GetComponent<Light>();
         StartLight.color = Color.red;
     }
