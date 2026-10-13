@@ -26,6 +26,7 @@ public class PlayerOnTrigger : MonoBehaviour
     public UnityEvent onTeleport;
     public UnityEvent onTraceArea;
     public UnityEvent onHideArea;
+    
 
     // Shared across trigger instances so one trigger can grant access to another.
     private static bool GetAuthority = false;
@@ -51,6 +52,7 @@ public class PlayerOnTrigger : MonoBehaviour
         if (other == PlayerCollider)
         {
             Debug.Log($"Trigger on {name} entered by {other.name}; category: {triggerCategory}", this);
+           
             EmitSelectedCategorySignal();
         }
     }
@@ -73,7 +75,7 @@ public class PlayerOnTrigger : MonoBehaviour
                     break;
                 }
 
-                onSceneChange?.Invoke();
+                onSceneChange.Invoke();
                 Debug.Log("门打开，灯变色");
                 break;
 
