@@ -291,6 +291,7 @@ GameObject:
   - component: {fileID: 7881293195257747932}
   - component: {fileID: 1567759323775964965}
   - component: {fileID: 1043880763172352048}
+  - component: {fileID: 3550769311860883209}
   m_Layer: 0
   m_Name: prison_door_2_3.003 (1)
   m_TagString: Untagged
@@ -370,6 +371,27 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3550769311860883209
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4113784044879596626}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.19008815, y: 6.4424806, z: 3.0623608}
+  m_Center: {x: -1.0377212, y: 3.3431084, z: 31.866325}
 --- !u!1 &5105634538752648773
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,6 +448,7 @@ MonoBehaviour:
   startPos: {x: 0, y: 0, z: 0}
   endPos: {x: 0, y: 10, z: 0}
   duration: 1
+  WaitTime: 0
 --- !u!114 &3043656749656590726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -441,6 +464,9 @@ MonoBehaviour:
   TriggerCollider: {fileID: 1115408017006824257}
   PlayerCollider: {fileID: 0}
   triggerCategory: 1
+  OnGameStart:
+    m_PersistentCalls:
+      m_Calls: []
   onItemCollect:
     m_PersistentCalls:
       m_Calls: []
@@ -560,6 +586,7 @@ GameObject:
   - component: {fileID: 1106445628924649800}
   - component: {fileID: 3282875581430566369}
   - component: {fileID: 2194098343292513833}
+  - component: {fileID: 4410597922337314346}
   m_Layer: 0
   m_Name: prison_door_2_3.003
   m_TagString: Untagged
@@ -639,6 +666,27 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4410597922337314346
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5975242965426058433}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.19008815, y: 6.4424806, z: 3.0623608}
+  m_Center: {x: -1.0377212, y: 3.3431084, z: 31.866325}
 --- !u!1 &6151273512918708614
 GameObject:
   m_ObjectHideFlags: 0

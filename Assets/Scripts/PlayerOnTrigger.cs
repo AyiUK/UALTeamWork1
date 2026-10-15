@@ -10,6 +10,7 @@ public class PlayerOnTrigger : MonoBehaviour
 
     public enum TriggerTag
     {
+        GameStart,
         ItemCollect,
         SceneChange,
         Teleport,
@@ -21,6 +22,7 @@ public class PlayerOnTrigger : MonoBehaviour
     public TriggerTag triggerCategory;
 
     [Header("Category Signals")]
+    public UnityEvent OnGameStart;
     public UnityEvent onItemCollect;
     public UnityEvent onSceneChange;
     public UnityEvent onTeleport;
@@ -34,6 +36,17 @@ public class PlayerOnTrigger : MonoBehaviour
     private void Reset()
     {
         TriggerCollider = GetComponent<Collider>();
+    }
+
+
+    private void Start()
+    {
+        switch (triggerCategory)
+        {
+            case TriggerTag.GameStart:
+                OnGameStart.Invoke(); 
+                break;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
