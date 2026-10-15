@@ -366,6 +366,9 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: d84c76c1881a1c749bfeebf7167bd7ca, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 889523353}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: d84c76c1881a1c749bfeebf7167bd7ca, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1447736378}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: d84c76c1881a1c749bfeebf7167bd7ca, type: 3}
       insertIndex: -1
@@ -2911,12 +2914,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889523350}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -5.17, y: 16.25, z: -13.25}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.9770865, y: 0.21284284, z: -0, w: 0}
+  m_LocalPosition: {x: -0.0013090761, y: 0.00053436996, z: 0.05535682}
+  m_LocalScale: {x: 0.0036855408, y: 0.003685541, z: 0.0036855403}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 77331265}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!43 &992340131
 Mesh:
@@ -9021,7 +9024,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 140277002645618383, guid: dde0a12116d7b38469768e1d6a410a95, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 140277002645618383, guid: dde0a12116d7b38469768e1d6a410a95, type: 3}
       propertyPath: m_IsTrigger
@@ -9039,6 +9042,14 @@ PrefabInstance:
       propertyPath: PlayerCollider
       value: 
       objectReference: {fileID: 1321622656}
+    - target: {fileID: 5275489716596073798, guid: dde0a12116d7b38469768e1d6a410a95, type: 3}
+      propertyPath: onSceneChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7881293195139966737}
+    - target: {fileID: 5275489716596073798, guid: dde0a12116d7b38469768e1d6a410a95, type: 3}
+      propertyPath: onSceneChange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenDoor
+      objectReference: {fileID: 0}
     - target: {fileID: 6496236707741301876, guid: dde0a12116d7b38469768e1d6a410a95, type: 3}
       propertyPath: m_Name
       value: DoorsStart
@@ -9159,6 +9170,17 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.19008815, y: 6.4424806, z: 3.0623608}
   m_Center: {x: -1.0377212, y: 3.3431084, z: 31.86633}
+--- !u!114 &7881293195139966737 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6802592776976455763, guid: dde0a12116d7b38469768e1d6a410a95, type: 3}
+  m_PrefabInstance: {fileID: 5632189681118873768}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4113784044997063298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d65bb3a624479f64fa54fd8d9c763b1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectMover
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -9167,7 +9189,6 @@ SceneRoots:
   - {fileID: 742680896}
   - {fileID: 1321622655}
   - {fileID: 1148626255}
-  - {fileID: 889523353}
   - {fileID: 568836437}
   - {fileID: 636073579}
   - {fileID: 833094987}

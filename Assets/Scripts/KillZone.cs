@@ -130,7 +130,7 @@ public class KillZone : MonoBehaviour
         return otherTransform == playerModel || otherTransform.IsChildOf(playerModel);
     }
 
-    private void KillPlayer()
+    public void KillPlayer()
     {
         if (debugMode)
         {
@@ -139,7 +139,7 @@ public class KillZone : MonoBehaviour
         RespawnPlayer();
     }
 
-    private void RespawnPlayer()
+    public void RespawnPlayer()
     {
         playerCollidersInside.Clear();
         timeInside = 0f;
