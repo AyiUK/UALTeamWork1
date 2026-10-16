@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7738759373027274504}
   - component: {fileID: 4355900677956879115}
   - component: {fileID: 7589972021699551598}
+  - component: {fileID: 1936778497948942572}
   m_Layer: 0
   m_Name: prison_door_2_3.003
   m_TagString: Untagged
@@ -107,6 +108,7 @@ MonoBehaviour:
   startPos: {x: 0, y: 0, z: 0}
   endPos: {x: 0, y: 10, z: 0}
   duration: 1
+  WaitTime: 3
 --- !u!114 &7589972021699551598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d09a2251e5c464342a0cb9fce5cccd84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerOnTrigger
-  TriggerCollider: {fileID: 0}
+  TriggerCollider: {fileID: 140277002645618383}
   PlayerCollider: {fileID: 0}
   triggerCategory: 0
   OnGameStart:
@@ -164,6 +166,31 @@ MonoBehaviour:
   onHideArea:
     m_PersistentCalls:
       m_Calls: []
+  onCounter:
+    m_PersistentCalls:
+      m_Calls: []
+  sceneChangesRequired: 14
+--- !u!65 &1936778497948942572
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983394265571448975}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.19008815, y: 6.4424806, z: 3.0623608}
+  m_Center: {x: -1.0377216, y: 3.3431084, z: 31.86633}
 --- !u!1 &1144692276185474635
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,7 +242,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -276,7 +303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
   m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
+  m_AdditionalLightsShadowResolutionTier: 1
   m_CustomShadowLayers: 0
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
@@ -484,7 +511,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -545,7 +572,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
   m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
+  m_AdditionalLightsShadowResolutionTier: 1
   m_CustomShadowLayers: 0
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
@@ -624,7 +651,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -685,7 +712,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
   m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
+  m_AdditionalLightsShadowResolutionTier: 1
   m_CustomShadowLayers: 0
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
@@ -787,6 +814,7 @@ GameObject:
   - component: {fileID: 140277002645618383}
   - component: {fileID: 5275489716596073798}
   - component: {fileID: 6802592776976455763}
+  - component: {fileID: 8942153383516097219}
   m_Layer: 0
   m_Name: prison_door_2_3.003 (1)
   m_TagString: Untagged
@@ -881,7 +909,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -968,6 +996,10 @@ MonoBehaviour:
   onHideArea:
     m_PersistentCalls:
       m_Calls: []
+  onCounter:
+    m_PersistentCalls:
+      m_Calls: []
+  sceneChangesRequired: 14
 --- !u!114 &6802592776976455763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -983,6 +1015,28 @@ MonoBehaviour:
   startPos: {x: 0, y: 0, z: 0}
   endPos: {x: 0, y: 10, z: 0}
   duration: 1
+  WaitTime: 0
+--- !u!65 &8942153383516097219
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6736206280702183082}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.19008815, y: 6.4424806, z: 3.0623608}
+  m_Center: {x: -1.0377212, y: 3.3431084, z: 31.86633}
 --- !u!1 &8688036619369150465
 GameObject:
   m_ObjectHideFlags: 0
@@ -1034,7 +1088,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -1095,7 +1149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
   m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
+  m_AdditionalLightsShadowResolutionTier: 1
   m_CustomShadowLayers: 0
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
