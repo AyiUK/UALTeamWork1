@@ -32,7 +32,9 @@ public class PlayerOnTrigger : MonoBehaviour
 
     // Shared across trigger instances so one trigger can grant access to another.
     private static bool GetAuthority = false;
-
+    // Each SceneChange trigger instance may fire once after authority is granted.
+    private bool sceneChangeTriggered;
+    
     private void Reset()
     {
         TriggerCollider = GetComponent<Collider>();
@@ -78,18 +80,27 @@ public class PlayerOnTrigger : MonoBehaviour
                 onItemCollect?.Invoke();
                 
                 GetAuthority=true;
-                Debug.Log("获得权力了");
+                Debug.Log("get the key");
                 break;
 
             case TriggerTag.SceneChange:
                 if (!GetAuthority)
                 {
-                    Debug.Log("尚未获得改变场景的权限");
+                    Debug.Log("you need the key to change");
                     break;
                 }
 
-                onSceneChange.Invoke();
-                Debug.Log("门打开，灯变色");
+
+                if (sceneChangeTriggered)
+                {
+                    break;
+                }
+
+                // Mark before invoking so re-entrant event calls cannot fire twice.
+                sceneChangeTriggered = true;
+                onSceneChange?.Invoke();
+                
+                Debug.Log("you change the scene");
                 break;
 
                 
@@ -97,15 +108,15 @@ public class PlayerOnTrigger : MonoBehaviour
                 
             case TriggerTag.Teleport:
                 onTeleport?.Invoke();
-                Debug.Log("可以传送了");
+                Debug.Log("teleport");
                 break;
             case TriggerTag.TraceArea:
                 onTraceArea?.Invoke();
-                Debug.Log("可以被追踪了");
+                Debug.Log("trace begin");
                 break;
             case TriggerTag.HideArea:
                 onHideArea?.Invoke();
-                Debug.Log("可以躲藏了");
+                Debug.Log("hide begin");
                 break;
         }
 
