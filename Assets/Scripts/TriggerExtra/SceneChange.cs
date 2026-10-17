@@ -10,6 +10,7 @@ public class SceneChanger : MonoBehaviour
         Floor2,
         Floor3,
         Floor4,
+        Floor5,
         EditScene
     }
 
@@ -23,6 +24,7 @@ public class SceneChanger : MonoBehaviour
             SceneList.Floor2 => "Floor2",
             SceneList.Floor3 => "Floor3",
             SceneList.Floor4 => "Floor4",
+            SceneList.Floor5 => "Floor5",
             SceneList.EditScene => "Editor",
             _ => "Floor1"
         };
