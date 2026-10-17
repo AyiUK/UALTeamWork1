@@ -423,6 +423,7 @@ GameObject:
   - component: {fileID: 8357418179185351093}
   - component: {fileID: 4161943713563249696}
   - component: {fileID: 131613215014733243}
+  - component: {fileID: 6732435146776750414}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -551,6 +552,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fbc47e0f1c30524a913e1aabb436ab7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LightColorChange
+--- !u!114 &6732435146776750414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6151273512918708614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aae0d0a9057a0764db53279c4b91d339, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LightEffect
+  Waves: 2
+  Speed: 2
 --- !u!1 &7307748088222296536
 GameObject:
   m_ObjectHideFlags: 0
@@ -692,6 +707,7 @@ GameObject:
   - component: {fileID: 2220686347805629312}
   - component: {fileID: 3426846535113456109}
   - component: {fileID: 7836433167219508209}
+  - component: {fileID: 671644283904246681}
   m_Layer: 0
   m_Name: Point Light (2)
   m_TagString: Untagged
@@ -820,6 +836,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fbc47e0f1c30524a913e1aabb436ab7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LightColorChange
+--- !u!114 &671644283904246681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698098088291327033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aae0d0a9057a0764db53279c4b91d339, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LightEffect
+  Waves: 2
+  Speed: 2
 --- !u!1001 &1559050270946575493
 PrefabInstance:
   m_ObjectHideFlags: 0

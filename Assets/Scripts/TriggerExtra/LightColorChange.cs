@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class LightColorChange : MonoBehaviour
 {
-    Light StartLight;
+    private Light StartLight;
 
     
 
