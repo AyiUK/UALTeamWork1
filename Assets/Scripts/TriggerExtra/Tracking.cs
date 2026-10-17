@@ -7,6 +7,7 @@ public class Tracking : MonoBehaviour
     [SerializeField] private float heightOffset;
     [SerializeField] private float startAngle;
     [SerializeField, Min(0f)] private float perimeterSpeed = 1f;
+    [SerializeField, Range(0f, 1f)] private float travelPerimeterFraction = 1f / 3f;
 
     private float elapsedTime;
     private Renderer cylinderRenderer;
@@ -80,10 +81,13 @@ public class Tracking : MonoBehaviour
         radiusX = Mathf.Max(0.001f, radiusX + surfaceOffset);
         radiusZ = Mathf.Max(0.001f, radiusZ + surfaceOffset);
 
-        // Follow one third of the horizontal XZ perimeter, then retrace it.
+        // Follow the configured fraction of the horizontal XZ perimeter, then retrace it.
         // When X and Z radii differ, the cross-section is an ellipse.
         float perimeter = GetEllipseArcLength(0f, 360f, radiusX, radiusZ);
-        float travelledDistance = Mathf.PingPong(elapsedTime * perimeterSpeed, perimeter / 3f);
+        float travelDistance = perimeter * Mathf.Clamp01(travelPerimeterFraction);
+        float travelledDistance = travelDistance > 0f
+            ? Mathf.PingPong(elapsedTime * perimeterSpeed, travelDistance)
+            : 0f;
         float sweepDegrees = GetSweepForDistance(startAngle, travelledDistance, radiusX, radiusZ);
         float angle = (startAngle - sweepDegrees) * Mathf.Deg2Rad;
 
