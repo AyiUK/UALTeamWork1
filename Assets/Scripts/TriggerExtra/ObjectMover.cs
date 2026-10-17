@@ -7,7 +7,7 @@ public class ObjectMover : MonoBehaviour
     [SerializeField] Vector3 startPos, endPos;
     Vector3 offsetPos;
     [SerializeField] float duration;
-    [SerializeField] float WaitTime;
+    
     void Start()
     {
         offsetPos = transform.localPosition;
@@ -25,7 +25,7 @@ public class ObjectMover : MonoBehaviour
     IEnumerator DoorOpenCoroutine()
     {
         // Wait before starting the door's movement animation.
-        yield return new WaitForSeconds(WaitTime);
+        
 
         float t = 0;
         while (t < 1f)

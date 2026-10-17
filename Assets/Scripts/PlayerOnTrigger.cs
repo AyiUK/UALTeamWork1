@@ -32,6 +32,10 @@ public class PlayerOnTrigger : MonoBehaviour
     public UnityEvent onHideArea;
     public UnityEvent onCounter;
 
+    [Tooltip("Delay in seconds before the GameStart trigger fires.")]
+    [Min(0f)]
+    public float WaitTime = 0f;
+
     [Tooltip("Number of successful SceneChange triggers required to fire this Counter trigger.")]
     [Min(1)]
     public int sceneChangesRequired = 14;
@@ -71,9 +75,15 @@ public class PlayerOnTrigger : MonoBehaviour
         switch (triggerCategory)
         {
             case TriggerTag.GameStart:
-                OnGameStart.Invoke(); 
+                StartCoroutine(TriggerGameStartAfterWait());
                 break;
         }
+    }
+
+    private System.Collections.IEnumerator TriggerGameStartAfterWait()
+    {
+        yield return new WaitForSeconds(WaitTime);
+        OnGameStart?.Invoke();
     }
 
     private void OnTriggerEnter(Collider other)
