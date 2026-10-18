@@ -15,6 +15,6 @@ public class LightColorChange : MonoBehaviour
 
     public void ChangeColor()
     {
-        StartLight.color= Color.green;
+        StartLight.color= Color.white;
     }
 }

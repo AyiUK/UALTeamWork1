@@ -20,7 +20,7 @@ public class MeterialColorChange : MonoBehaviour
 
     public void MeterialChangeColor()
     {
-        SetEmissionColor(Color.green);
+        SetEmissionColor(Color.white);
     }
 
     private void SetEmissionColor(Color color)
