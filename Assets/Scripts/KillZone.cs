@@ -8,6 +8,7 @@ public class KillZone : MonoBehaviour
     [SerializeField, Min(0f)] private float secondsBeforeRespawn = 0f;
     [Tooltip("When assigned, only this collider is used to detect the player entering and leaving the KillZone.")]
     public Collider playerColliderToDetect;
+    [SerializeField] private AudioSource DeadSound;
     [Tooltip("Log trigger entry, exit, timer resets, and death to the Console.")]
     public bool debugMode;
 
@@ -130,17 +131,19 @@ public class KillZone : MonoBehaviour
         return otherTransform == playerModel || otherTransform.IsChildOf(playerModel);
     }
 
-    private void KillPlayer()
+    public void KillPlayer()
     {
         if (debugMode)
         {
             Debug.Log($"KillZone: player reached {timeInside:F2} seconds and died.", playerModel);
         }
+        
         RespawnPlayer();
     }
 
-    private void RespawnPlayer()
+    public void RespawnPlayer()
     {
+        DeadSound.Play();
         playerCollidersInside.Clear();
         timeInside = 0f;
 

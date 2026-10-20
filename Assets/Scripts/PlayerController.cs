@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float gravity = -9.81f;
 
     private CharacterController characterController;
+    private AudioSource audioSource;
     private float verticalVelocity;
     private float previousAimAngle;
     private float pendingAimAngle;
@@ -18,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void LateUpdate()
@@ -68,6 +70,23 @@ public class PlayerController : MonoBehaviour
         Vector3 moveDirection = transform.forward * input.y + transform.right * input.x;
         moveDirection.y = 0f;
         moveDirection.Normalize();
+
+        // Start the movement sound while directional movement input is held,
+        // and stop it once the player releases the movement keys.
+        if (audioSource != null)
+        {
+            if (input.sqrMagnitude > 0f)
+            {
+                if (!audioSource.isPlaying)
+                {
+                    audioSource.Play();
+                }
+            }
+            else if (audioSource.isPlaying)
+            {
+                audioSource.Stop();
+            }
+        }
 
         if (characterController.isGrounded && verticalVelocity < 0f)
         {
