@@ -2246,6 +2246,7 @@ GameObject:
   - component: {fileID: 742680893}
   - component: {fileID: 742680892}
   - component: {fileID: 742680891}
+  - component: {fileID: 742680897}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2483,9 +2484,27 @@ Transform:
   m_LocalPosition: {x: 4.0000005, y: -0.6700001, z: 0.00000047683716}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 859232446}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &742680897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742680889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e6d2fa8a9504f17b676b7ef9aa78cf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraColliderTracking
+  trackingCamera: {fileID: 742680890}
+  player: {fileID: 1321622657}
+  obstacleLayers:
+    serializedVersion: 2
+    m_Bits: 3
 --- !u!1 &778602907
 GameObject:
   m_ObjectHideFlags: 0
@@ -3840,12 +3859,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 859232443}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.51169974, y: -0.14542714, z: 0.08836349, w: 0.84214383}
-  m_LocalPosition: {x: -3.8154511, y: 15.201243, z: 6.423403}
+  m_LocalRotation: {x: 0.42608428, y: 0.49341318, z: -0.29808947, w: 0.6972362}
+  m_LocalPosition: {x: 6.423404, y: 15.831265, z: 7.8961177}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 742680896}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &873055880
 PrefabInstance:
@@ -5537,6 +5556,11 @@ PrefabInstance:
 --- !u!136 &1321622656 stripped
 CapsuleCollider:
   m_CorrespondingSourceObject: {fileID: 2685743228256243366, guid: 96311b195c2e1b647a423c457c97d2f7, type: 3}
+  m_PrefabInstance: {fileID: 1321622655}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1321622657 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1690238720075014039, guid: 96311b195c2e1b647a423c457c97d2f7, type: 3}
   m_PrefabInstance: {fileID: 1321622655}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1321622659 stripped
@@ -8554,7 +8578,6 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 859232446}
   - {fileID: 742680896}
   - {fileID: 1321622655}
   - {fileID: 1148626255}
