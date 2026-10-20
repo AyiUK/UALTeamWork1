@@ -728,6 +728,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8354636757393105123, guid: 96311b195c2e1b647a423c457c97d2f7, type: 3}
   m_PrefabInstance: {fileID: 274510584}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &274510586 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1690238720075014039, guid: 96311b195c2e1b647a423c457c97d2f7, type: 3}
+  m_PrefabInstance: {fileID: 274510584}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &317010463
 GameObject:
   m_ObjectHideFlags: 0
@@ -1273,6 +1278,7 @@ GameObject:
   - component: {fileID: 889236794}
   - component: {fileID: 889236793}
   - component: {fileID: 889236792}
+  - component: {fileID: 889236798}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1513,6 +1519,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &889236798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889236790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e6d2fa8a9504f17b676b7ef9aa78cf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraColliderTracking
+  trackingCamera: {fileID: 889236791}
+  player: {fileID: 274510586}
+  obstacleLayers:
+    serializedVersion: 2
+    m_Bits: 3
 --- !u!1 &1111891627
 GameObject:
   m_ObjectHideFlags: 0
