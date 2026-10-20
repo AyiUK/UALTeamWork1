@@ -946,7 +946,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MeterialColorChange
   targetRenderer: {fileID: 172067349562513409}
-  intensity: 2
+  intensity: 5
 --- !u!1001 &2875928001934445084
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1038,7 +1038,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MeterialColorChange
   targetRenderer: {fileID: 3470248801510643352}
-  intensity: 2
+  intensity: 5
 --- !u!23 &3470248801510643352 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 0f814705b4202f149a205f7b915df7d6, type: 3}
