@@ -24,11 +24,19 @@ public class PlayerController : MonoBehaviour
 
     private void LateUpdate()
     {
-        Keyboard keyboard = Keyboard.current;
+        bool inputBlocked = InputStop.IsMovementBlocked;
+        Keyboard keyboard = inputBlocked ? null : Keyboard.current;
         Vector2 input = ReadMovementInput(keyboard);
         bool turnAround = keyboard != null && keyboard.sKey.wasPressedThisFrame;
 
-        if (cameraTarget != null)
+        if (inputBlocked)
+        {
+            // Discard pending mouse-aim movement so it cannot rotate the player
+            // after the input blocker disappears.
+            pendingAimAngle = 0f;
+            hasPreviousAimAngle = false;
+        }
+        else if (cameraTarget != null)
         {
             // Use changes in the target's angle relative to the player. This avoids
             // chasing a world-space heading that can move when the player turns.

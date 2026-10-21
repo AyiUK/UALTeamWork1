@@ -31,6 +31,7 @@ public class PlayerOnTrigger : MonoBehaviour
     public UnityEvent onTraceArea;
     public UnityEvent onHideArea;
     public UnityEvent onCounter;
+    public UnityEvent onPlayerEnter;
 
     [Tooltip("Delay in seconds before the GameStart trigger fires.")]
     [Min(0f)]
@@ -51,6 +52,7 @@ public class PlayerOnTrigger : MonoBehaviour
 
     private void OnEnable()
     {
+        TriggerCollider.isTrigger = true;
         SceneManager.sceneLoaded += ResetTraceAreaForNewScene;
     }
 
@@ -93,12 +95,6 @@ public class PlayerOnTrigger : MonoBehaviour
             return;
         }
 
-        if (!TriggerCollider.isTrigger)
-        {
-            Debug.LogError("PlayerOnTrigger: TriggerCollider must have Is Trigger enabled.", this);
-            return;
-        }
-
         if (other == PlayerCollider)
         {
             Debug.Log($"Trigger on {name} entered by {other.name}; category: {triggerCategory}", this);
@@ -109,6 +105,7 @@ public class PlayerOnTrigger : MonoBehaviour
 
     private void EmitSelectedCategorySignal()
     {
+        onPlayerEnter.Invoke();
         switch (triggerCategory)
         {
             case TriggerTag.ItemCollect:
