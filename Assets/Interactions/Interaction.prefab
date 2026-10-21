@@ -130,6 +130,9 @@ MonoBehaviour:
   startPos: {x: 0, y: 0, z: 0}
   endPos: {x: 0, y: 5, z: 0}
   duration: 1
+  onDoorOpen:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &186798249162328200
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,6 +555,9 @@ MonoBehaviour:
   onCounter:
     m_PersistentCalls:
       m_Calls: []
+  onPlayerEnter:
+    m_PersistentCalls:
+      m_Calls: []
   WaitTime: 0
   sceneChangesRequired: 14
 --- !u!1 &365533847420814226
@@ -610,8 +616,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4.0565867, y: 3.6742404, z: 1.3346066}
-  m_Center: {x: 0.2688868, y: 0.5063218, z: 0.16730341}
+  m_Size: {x: 4.0565867, y: 3.6742404, z: 1.6307982}
+  m_Center: {x: 0.2688868, y: 0.5063218, z: 0.31539923}
 --- !u!114 &9158245999272240988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -694,6 +700,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   onCounter:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlayerEnter:
     m_PersistentCalls:
       m_Calls: []
   WaitTime: 0
@@ -1088,6 +1097,9 @@ MonoBehaviour:
   startPos: {x: 0, y: 0, z: 0}
   endPos: {x: 0, y: 5, z: 0}
   duration: 1
+  onDoorOpen:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &658122850983385855
 GameObject:
   m_ObjectHideFlags: 0
@@ -1249,8 +1261,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4.0565867, y: 3.6742404, z: 1.3346066}
-  m_Center: {x: 0.2688868, y: 0.5063218, z: 0.16730341}
+  m_Size: {x: 4.0565867, y: 3.6742404, z: 1.8076732}
+  m_Center: {x: 0.2688868, y: 0.5063218, z: 0.40383613}
 --- !u!114 &1102766347024014745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1333,6 +1345,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   onCounter:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlayerEnter:
     m_PersistentCalls:
       m_Calls: []
   WaitTime: 0
@@ -1439,6 +1454,9 @@ MonoBehaviour:
   onCounter:
     m_PersistentCalls:
       m_Calls: []
+  onPlayerEnter:
+    m_PersistentCalls:
+      m_Calls: []
   WaitTime: 0
   sceneChangesRequired: 14
 --- !u!1 &974361923565826855
@@ -1497,8 +1515,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4.0565867, y: 3.6742404, z: 1.3346066}
-  m_Center: {x: 0.2688868, y: 0.5063218, z: 0.16730341}
+  m_Size: {x: 4.0565867, y: 3.6742404, z: 1.6222758}
+  m_Center: {x: 0.2688868, y: 0.5063218, z: 0.31113786}
 --- !u!114 &4322272027034688722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1581,6 +1599,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   onCounter:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlayerEnter:
     m_PersistentCalls:
       m_Calls: []
   WaitTime: 0
@@ -2054,6 +2075,9 @@ MonoBehaviour:
   startPos: {x: 0, y: 0, z: 0}
   endPos: {x: 0, y: 5, z: 0}
   duration: 1
+  onDoorOpen:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1377506918571346240
 GameObject:
   m_ObjectHideFlags: 0
@@ -2572,7 +2596,7 @@ Transform:
   m_GameObject: {fileID: 2040708137052664181}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.5562958, z: -0, w: -0.83098435}
-  m_LocalPosition: {x: 0.31, y: 0.19999981, z: 0.47}
+  m_LocalPosition: {x: 0.41, y: 0.19999981, z: 0.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3339,8 +3363,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4.0565867, y: 3.6742404, z: 1.3346066}
-  m_Center: {x: 0.2688868, y: 0.5063218, z: 0.16730341}
+  m_Size: {x: 4.0565867, y: 3.6742404, z: 2.0303862}
+  m_Center: {x: 0.26888677, y: 0.5063218, z: 0.51519346}
 --- !u!114 &5987746399693016948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3423,6 +3447,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   onCounter:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlayerEnter:
     m_PersistentCalls:
       m_Calls: []
   WaitTime: 0
@@ -3841,6 +3868,9 @@ MonoBehaviour:
   startPos: {x: 0, y: 0, z: 0}
   endPos: {x: 0, y: 5, z: 0}
   duration: 1
+  onDoorOpen:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2885153014309638084
 GameObject:
   m_ObjectHideFlags: 0
@@ -4002,8 +4032,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4.0565867, y: 3.6742404, z: 1.3346066}
-  m_Center: {x: 0.2688868, y: 0.5063218, z: 0.16730341}
+  m_Size: {x: 4.0565867, y: 3.6742404, z: 1.594714}
+  m_Center: {x: 0.2688868, y: 0.5063218, z: 0.2973574}
 --- !u!114 &4395813388155950932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4088,6 +4118,9 @@ MonoBehaviour:
   onCounter:
     m_PersistentCalls:
       m_Calls: []
+  onPlayerEnter:
+    m_PersistentCalls:
+      m_Calls: []
   WaitTime: 0
   sceneChangesRequired: 14
 --- !u!1 &2973564318652736810
@@ -4146,8 +4179,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4.0565867, y: 3.6742404, z: 1.3346066}
-  m_Center: {x: 0.2688868, y: 0.5063218, z: 0.16730341}
+  m_Size: {x: 4.0565867, y: 3.6742404, z: 1.6342127}
+  m_Center: {x: 0.2688868, y: 0.5063218, z: 0.31710684}
 --- !u!114 &3297804983945360493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4232,6 +4265,9 @@ MonoBehaviour:
   onCounter:
     m_PersistentCalls:
       m_Calls: []
+  onPlayerEnter:
+    m_PersistentCalls:
+      m_Calls: []
   WaitTime: 0
   sceneChangesRequired: 14
 --- !u!1 &3165074800268534724
@@ -4290,8 +4326,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4.0565867, y: 3.6742404, z: 1.3346066}
-  m_Center: {x: 0.2688868, y: 0.5063218, z: 0.16730341}
+  m_Size: {x: 4.0565867, y: 3.6742404, z: 1.959156}
+  m_Center: {x: 0.2688868, y: 0.5063218, z: 0.4795779}
 --- !u!114 &7174238465962583815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4374,6 +4410,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   onCounter:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlayerEnter:
     m_PersistentCalls:
       m_Calls: []
   WaitTime: 0
@@ -4559,7 +4598,7 @@ Transform:
   m_GameObject: {fileID: 3632276321060719418}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: -0.70710677}
-  m_LocalPosition: {x: 0.1, y: 0.19999981, z: 0.71}
+  m_LocalPosition: {x: 0.1, y: 0.19999981, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5322,8 +5361,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4.0565867, y: 3.6742404, z: 1.3346066}
-  m_Center: {x: 0.2688868, y: 0.5063218, z: 0.16730341}
+  m_Size: {x: 4.0565867, y: 3.6742404, z: 1.6434913}
+  m_Center: {x: 0.2688868, y: 0.5063218, z: 0.32174587}
 --- !u!114 &4869227369304251625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5408,6 +5447,9 @@ MonoBehaviour:
   onCounter:
     m_PersistentCalls:
       m_Calls: []
+  onPlayerEnter:
+    m_PersistentCalls:
+      m_Calls: []
   WaitTime: 0
   sceneChangesRequired: 14
 --- !u!1 &4070881331220153184
@@ -5466,8 +5508,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4.0565867, y: 3.6742404, z: 1.3346066}
-  m_Center: {x: 0.2688868, y: 0.5063218, z: 0.16730341}
+  m_Size: {x: 4.0565867, y: 3.6742404, z: 1.7828492}
+  m_Center: {x: 0.26888683, y: 0.5063218, z: 0.39142364}
 --- !u!114 &4882806297966491600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5550,6 +5592,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   onCounter:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlayerEnter:
     m_PersistentCalls:
       m_Calls: []
   WaitTime: 0
@@ -5684,6 +5729,9 @@ MonoBehaviour:
   startPos: {x: 0, y: 0, z: 0}
   endPos: {x: 0, y: 5, z: 0}
   duration: 1
+  onDoorOpen:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4155359974525410570
 GameObject:
   m_ObjectHideFlags: 0
@@ -5799,6 +5847,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  onPlayerEnter:
+    m_PersistentCalls:
+      m_Calls: []
   WaitTime: 0
   sceneChangesRequired: 14
 --- !u!1 &4229505363111156597
@@ -6036,6 +6087,9 @@ MonoBehaviour:
   startPos: {x: 0, y: 0, z: 0}
   endPos: {x: 0, y: 5, z: 0}
   duration: 1
+  onDoorOpen:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4392511684863667747
 GameObject:
   m_ObjectHideFlags: 0
@@ -6298,8 +6352,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4.0565867, y: 3.6742404, z: 1.3346066}
-  m_Center: {x: 0.2688868, y: 0.5063218, z: 0.16730341}
+  m_Size: {x: 4.0565867, y: 3.6742404, z: 1.5847068}
+  m_Center: {x: 0.26888677, y: 0.5063218, z: 0.29235375}
 --- !u!114 &6331154744379662074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6382,6 +6436,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   onCounter:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlayerEnter:
     m_PersistentCalls:
       m_Calls: []
   WaitTime: 0
@@ -7440,6 +7497,9 @@ MonoBehaviour:
   startPos: {x: 0, y: 0, z: 0}
   endPos: {x: 0, y: 5, z: 0}
   duration: 1
+  onDoorOpen:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5800817919871819662
 GameObject:
   m_ObjectHideFlags: 0
@@ -7496,8 +7556,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4.0565867, y: 3.6742404, z: 1.3346066}
-  m_Center: {x: 0.2688868, y: 0.5063218, z: 0.16730341}
+  m_Size: {x: 4.0565867, y: 3.6742404, z: 1.6920344}
+  m_Center: {x: 0.2688868, y: 0.5063218, z: 0.34601712}
 --- !u!114 &4561087004566672346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7580,6 +7640,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   onCounter:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlayerEnter:
     m_PersistentCalls:
       m_Calls: []
   WaitTime: 0
@@ -7869,6 +7932,9 @@ MonoBehaviour:
   startPos: {x: 0, y: 0, z: 0}
   endPos: {x: 0, y: 5, z: 0}
   duration: 1
+  onDoorOpen:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6011421459469422341
 GameObject:
   m_ObjectHideFlags: 0
@@ -7999,6 +8065,9 @@ MonoBehaviour:
   startPos: {x: 0, y: 0, z: 0}
   endPos: {x: 0, y: 5, z: 0}
   duration: 1
+  onDoorOpen:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6048372132295493359
 GameObject:
   m_ObjectHideFlags: 0
@@ -8129,6 +8198,9 @@ MonoBehaviour:
   startPos: {x: 0, y: 0, z: 0}
   endPos: {x: 0, y: 5, z: 0}
   duration: 1
+  onDoorOpen:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6248711594978574050
 GameObject:
   m_ObjectHideFlags: 0
@@ -8688,8 +8760,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4.0565867, y: 3.6742404, z: 1.3346066}
-  m_Center: {x: 0.2688868, y: 0.5063218, z: 0.16730341}
+  m_Size: {x: 4.0565867, y: 3.6742404, z: 1.7415694}
+  m_Center: {x: 0.26888677, y: 0.5063218, z: 0.37078476}
 --- !u!114 &3153737025761467218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8772,6 +8844,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   onCounter:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlayerEnter:
     m_PersistentCalls:
       m_Calls: []
   WaitTime: 0
@@ -9088,6 +9163,9 @@ MonoBehaviour:
   startPos: {x: 0, y: 0, z: 0}
   endPos: {x: 0, y: 5, z: 0}
   duration: 1
+  onDoorOpen:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7531756131559981432
 GameObject:
   m_ObjectHideFlags: 0
@@ -10095,6 +10173,9 @@ MonoBehaviour:
   startPos: {x: 0, y: 0, z: 0}
   endPos: {x: 0, y: 5, z: 0}
   duration: 1
+  onDoorOpen:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8239609371791598774
 GameObject:
   m_ObjectHideFlags: 0
@@ -10151,8 +10232,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4.0565867, y: 3.6742404, z: 1.3346066}
-  m_Center: {x: 0.2688868, y: 0.5063218, z: 0.16730341}
+  m_Size: {x: 4.0565867, y: 3.6742404, z: 1.663136}
+  m_Center: {x: 0.2688868, y: 0.5063218, z: 0.33156782}
 --- !u!114 &6068963602021236199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10235,6 +10316,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   onCounter:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlayerEnter:
     m_PersistentCalls:
       m_Calls: []
   WaitTime: 0
@@ -10400,8 +10484,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4.0565867, y: 3.6742404, z: 1.3346066}
-  m_Center: {x: 0.2688868, y: 0.5063218, z: 0.16730341}
+  m_Size: {x: 4.0565867, y: 3.6742404, z: 1.7254859}
+  m_Center: {x: 0.2688868, y: 0.5063218, z: 0.3627432}
 --- !u!114 &2541496833233110413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10484,6 +10568,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   onCounter:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlayerEnter:
     m_PersistentCalls:
       m_Calls: []
   WaitTime: 0
@@ -10641,6 +10728,9 @@ MonoBehaviour:
   startPos: {x: 0, y: 0, z: 0}
   endPos: {x: 0, y: 5, z: 0}
   duration: 1
+  onDoorOpen:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &7494986989574659157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10701,6 +10791,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onPlayerEnter:
+    m_PersistentCalls:
+      m_Calls: []
   WaitTime: 0
   sceneChangesRequired: 14
 --- !u!1 &8451207673393769230
@@ -10833,6 +10926,9 @@ MonoBehaviour:
   startPos: {x: 0, y: 0, z: 0}
   endPos: {x: 0, y: 5, z: 0}
   duration: 1
+  onDoorOpen:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8843829243397840066
 GameObject:
   m_ObjectHideFlags: 0
@@ -11427,6 +11523,9 @@ MonoBehaviour:
   startPos: {x: 0, y: 0, z: 0}
   endPos: {x: 0, y: 5, z: 0}
   duration: 1
+  onDoorOpen:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &9219245138879136640
 GameObject:
   m_ObjectHideFlags: 0
@@ -11520,6 +11619,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   onCounter:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlayerEnter:
     m_PersistentCalls:
       m_Calls: []
   WaitTime: 0

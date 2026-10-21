@@ -41,7 +41,9 @@ public class CameraTargetFollow : MonoBehaviour
             hasInitializedYaw = true;
         }
 
-        Mouse mouse = Mouse.current;
+        // Mouse clicks remain available to other systems, but mouse motion must
+        // not steer the player's aim while an InputStop object is active.
+        Mouse mouse = InputStop.IsMovementBlocked ? null : Mouse.current;
         if (aimCamera != null && mouse != null)
         {
             Vector2 mousePosition = mouse.position.ReadValue();

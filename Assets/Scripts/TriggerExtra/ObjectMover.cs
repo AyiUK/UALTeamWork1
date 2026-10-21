@@ -1,5 +1,5 @@
 using System.Collections;
-
+using UnityEngine.Events;
 using UnityEngine;
 
 public class ObjectMover : MonoBehaviour
@@ -7,6 +7,7 @@ public class ObjectMover : MonoBehaviour
     [SerializeField] Vector3 startPos, endPos;
     Vector3 offsetPos;
     [SerializeField] float duration;
+    public UnityEvent onDoorOpen;
     
     void Start()
     {
@@ -35,6 +36,7 @@ public class ObjectMover : MonoBehaviour
             transform.localPosition = offsetPos + newPos;
             yield return null;
         }
+        onDoorOpen.Invoke();
     }
 
     float easeOutQuart(float x) => 1 - Mathf.Pow(1 - x, 4);
