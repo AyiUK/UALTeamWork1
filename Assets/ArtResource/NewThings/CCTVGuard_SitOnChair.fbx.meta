@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/ArtResource/NewThings/CCTVGuard_SitOnChair.fbx.meta
 guid: 1de8a127d5155cd4fafb96fda64b9e73
+========
+guid: 1028a81daab3e294bb41b754407d5720
+>>>>>>>> 6062772b487541ff7dac4f3bd7216736b8989b17:Assets/ArtResource/ZYH-materialBall/SIMPLE ROUND TABLE.obj.meta
 ModelImporter:
   serializedVersion: 24300
   internalIDToNameTable: []
