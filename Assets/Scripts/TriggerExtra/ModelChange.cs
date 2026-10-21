@@ -28,7 +28,7 @@ public class ModelChange : MonoBehaviour
             spawnParent
         );
 
-        newModel.transform.localScale = scale;
+        
 
 
         // Hide the GameObject carrying this component, including child renderers.
