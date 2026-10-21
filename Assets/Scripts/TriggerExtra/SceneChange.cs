@@ -11,7 +11,7 @@ public class SceneChanger : MonoBehaviour
         Floor3,
         Floor4,
         Floor5,
-        EditScene
+        StartUI
     }
 
     [SerializeField] private SceneList targetScene;
@@ -25,7 +25,8 @@ public class SceneChanger : MonoBehaviour
             SceneList.Floor3 => "Floor3",
             SceneList.Floor4 => "Floor4",
             SceneList.Floor5 => "Floor5",
-            SceneList.EditScene => "Editor",
+            SceneList.StartUI => "Start",
+            
             _ => "Floor1"
         };
 
