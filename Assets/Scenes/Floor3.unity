@@ -8391,7 +8391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.DecalProjector
-  m_Material: {fileID: 2100000, guid: bbf71b779aa11114aab402f148cd905d, type: 2}
+  m_Material: {fileID: 2100000, guid: 5f8341c95ca0bcb4e8c7398d65fac184, type: 2}
   m_DrawDistance: 1000
   m_FadeScale: 0.9
   m_StartAngleFade: 180
@@ -9543,7 +9543,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 959750089406997896, guid: 8d1a148685e21f14887410f649d317bd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1073100991190046465, guid: 8d1a148685e21f14887410f649d317bd, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -10585,6 +10585,10 @@ PrefabInstance:
       propertyPath: PlayerCollider
       value: 
       objectReference: {fileID: 1887563295}
+    - target: {fileID: 8230318492278178141, guid: 8d1a148685e21f14887410f649d317bd, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 5015b3c9947124046a0207fd91083a72, type: 3}
     - target: {fileID: 8248520312829821533, guid: 8d1a148685e21f14887410f649d317bd, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
