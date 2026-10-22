@@ -4307,7 +4307,7 @@ PrefabInstance:
       objectReference: {fileID: 1520133032}
     - target: {fileID: 2607372174937108374, guid: 8d1a148685e21f14887410f649d317bd, type: 3}
       propertyPath: onTraceArea.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2607372174937108374, guid: 8d1a148685e21f14887410f649d317bd, type: 3}
       propertyPath: onTraceArea.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -4353,6 +4353,10 @@ PrefabInstance:
       propertyPath: targetScene
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2823493255474154623, guid: 8d1a148685e21f14887410f649d317bd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3128633092385000118, guid: 8d1a148685e21f14887410f649d317bd, type: 3}
       propertyPath: m_LocalPosition.y
       value: 15.3
@@ -4373,6 +4377,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 16.8
       objectReference: {fileID: 0}
+    - target: {fileID: 4072904445026130566, guid: 8d1a148685e21f14887410f649d317bd, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072904445026130566, guid: 8d1a148685e21f14887410f649d317bd, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 107fd7e0b0bf76b47803afb29353f3a6, type: 3}
     - target: {fileID: 4322272027034688722, guid: 8d1a148685e21f14887410f649d317bd, type: 3}
       propertyPath: PlayerCollider
       value: 
