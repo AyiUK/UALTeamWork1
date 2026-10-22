@@ -55,8 +55,10 @@ Material:
     - _Cutoff: 0.61
     - _DstBlend: 10
     - _DstBlendAlpha: 10
+    - _Metallic: 0.8
     - _Parallax: 0.005
-    - _Smoothness: 0.87
+    - _QueueOffset: 0
+    - _Smoothness: 0.874
     - _Surface: 1
     - _ZWrite: 0
     m_Colors:
